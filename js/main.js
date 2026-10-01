@@ -74,18 +74,37 @@ siteNav.querySelectorAll("a").forEach((link) => {
   });
 });
 
-form.addEventListener("submit", (event) => {
+form.addEventListener("submit", async (event) => {
   event.preventDefault();
   const data = new FormData(form);
   const name = data.get("name");
   const phone = data.get("phone");
   const email = data.get("email");
   const message = data.get("message");
+  const contactEmail = "Angelshomecare26@outlook.com";
+
+  formStatus.textContent = "Sending your message...";
+
+  try {
+    const response = await fetch(`https://formsubmit.co/ajax/${contactEmail}`, {
+      method: "POST",
+      headers: { Accept: "application/json" },
+      body: data,
+    });
+
+    if (response.ok) {
+      form.reset();
+      formStatus.textContent = "Message sent. We will get back to you soon.";
+      return;
+    }
+  } catch (error) {
+    // Fall through to the email app if the send service is blocked.
+  }
+
   const subject = encodeURIComponent(`Tour request from ${name}`);
   const body = encodeURIComponent(
     `Name: ${name}\nPhone: ${phone}\nEmail: ${email}\n\n${message}`
   );
-
-  window.location.href = `mailto:Angelshomecare26@outlook.com?subject=${subject}&body=${body}`;
-  formStatus.textContent = "Opening your email app so you can send the message.";
+  window.location.href = `mailto:${contactEmail}?subject=${subject}&body=${body}`;
+  formStatus.textContent = `If your email app opens, send it to ${contactEmail}.`;
 });

@@ -16,7 +16,7 @@
       href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Great+Vibes&family=Outfit:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="css/styles.css?v=tune26" />
+    <link rel="stylesheet" href="css/styles.css?v=logo27" />
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -58,7 +58,7 @@
       </div>
       <div class="nav-wrap">
         <a class="brand" href="#top">
-          <img src="images/logo-name.png" alt="Angel's Home Care" />
+          <img src="images/logo-name.png" alt="ANGELS Home Care" />
         </a>
         <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
           <span class="sr-only">Menu</span>
@@ -71,7 +71,7 @@
           <a href="#services">Services</a>
           <a href="#home">The Home</a>
           <a href="#contact">Contact</a>
-          <a class="btn btn-nav" href="tel:+14086181410">Call now</a>
+          <a class="btn btn-nav" href="tel:+14086181410" aria-label="Call (408) 618-1410">Call now</a>
         </nav>
       </div>
     </header>
@@ -248,11 +248,11 @@
         </div>
         <div class="contact-layout">
           <div class="contact-details">
-            <a class="contact-card" href="tel:+14086181410">
+            <a class="contact-card" href="tel:+14086181410" aria-label="Call (408) 618-1410">
               <span>Phone</span>
               <strong>(408) 618-1410</strong>
             </a>
-            <a class="contact-card" href="mailto:Angelshomecare26@outlook.com">
+            <a class="contact-card" href="mailto:Angelshomecare26@outlook.com" aria-label="Email Angelshomecare26@outlook.com">
               <span>Email</span>
               <strong>Angelshomecare26@outlook.com</strong>
             </a>
@@ -274,7 +274,11 @@
               ></iframe>
             </div>
           </div>
-          <form class="contact-form" id="contact-form">
+          <form class="contact-form" id="contact-form" action="https://formsubmit.co/Angelshomecare26@outlook.com" method="POST">
+            <input type="hidden" name="_subject" value="New message from the ANGELS Home Care website" />
+            <input type="hidden" name="_template" value="table" />
+            <input type="hidden" name="_captcha" value="false" />
+            <input type="text" name="_honey" class="sr-only" tabindex="-1" autocomplete="off" />
             <label>
               Your name
               <input type="text" name="name" autocomplete="name" required />
@@ -292,7 +296,7 @@
               <textarea name="message" rows="5" required placeholder="Tell us a little about the tour or care you are looking for."></textarea>
             </label>
             <button class="btn btn-primary" type="submit">Send a message</button>
-            <p class="form-note">This opens an email to Angelshomecare26@outlook.com with your details.</p>
+            <p class="form-note">Your message goes to Angelshomecare26@outlook.com.</p>
             <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
           </form>
         </div>
@@ -301,21 +305,21 @@
 
     <footer class="site-footer">
       <div class="footer-brand">
-        <img src="images/logo-name.png" alt="Angel's Home Care logo: Give a hand, change a life" />
+        <img src="images/logo-name.png" alt="ANGELS Home Care" />
         <p>Give a hand, change a life.</p>
       </div>
       <div class="footer-meta">
         <p>6417 Livorno Way<br />Elk Grove, CA 95757</p>
         <p>License #342701896</p>
         <p>
-          <a href="tel:+14086181410">(408) 618-1410</a>
+          <a href="tel:+14086181410" aria-label="Call (408) 618-1410">(408) 618-1410</a>
           <a href="mailto:Angelshomecare26@outlook.com">Angelshomecare26@outlook.com</a>
         </p>
       </div>
       <p class="footer-signature" aria-label="Owner, Anas Kasaballi">Anas Kasaballi</p>
     </footer>
 
-    <a class="call-fab" href="tel:+14086181410">Call (408) 618-1410</a>
+    <a class="call-fab" href="tel:+14086181410" aria-label="Call (408) 618-1410">Call (408) 618-1410</a>
 
     <dialog class="lightbox" id="lightbox" aria-label="Photo viewer">
       <button class="lightbox-close" type="button" aria-label="Close photo">&times;</button>
@@ -325,6 +329,6 @@
       <p class="lightbox-caption"></p>
     </dialog>
 
-    <script src="js/main.js?v=together"></script>
+    <script src="js/main.js?v=logo27"></script>
   </body>
 </html>
